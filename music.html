@@ -18,7 +18,7 @@
     </header>
 
     <!-- Navigation -->
-    <nav>
+    <nav role="navigation">
         <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="research.html">Research</a></li>
@@ -48,15 +48,18 @@
         <h2>Music Media</h2>
         <div class="container">
             <div>
-                <h3>Photos</h3>
-                <img src="images/music_photo1.jpg" alt="Trombone Performance" style="width:100%; max-width:600px;">
+                <h3>Spotify</h3>
+                <class="spotify" style="justify-content: center; display: flex;">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/playlist/5QaxBIgOWPloeH3kvkRpjO?utm_source=generator"
+                        width="50%" height="352" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                    </class>
             </div>
             <div>
-                <h3>Videos</h3>
-                <video controls style="width:100%; max-width:600px;">
-                    <source src="videos/music_performance.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <h3>Photos</h3>
+                <img src="images/music_photo1.jpg" alt="Trombone Performance" style="width:100%; max-width:600px;">
             </div>
         </div>
     </section>
@@ -64,6 +67,7 @@
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Amir Mano | All Rights Reserved</p>
+        <a href="#" class="back-to-top">Back to Top</a>
     </footer>
 
 </body>

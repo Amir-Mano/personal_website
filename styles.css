@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     background-color: #f2ecf6;
     color: #333;
     line-height: 1.6;
@@ -119,6 +119,23 @@ section#about {
     max-width: 600px;
 }
 
+.image-horizontal img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image_horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
 
 /* Card-like Sections */
 .about,
@@ -204,7 +221,6 @@ section#about {
 
 .research-item img,
 .music-item img {
-    width: 100%;
     max-width: 400px;
     height: 100%;
     max-height: 400px;
@@ -315,4 +331,14 @@ section {
         font-weight: 600;
         margin-top: 20px;
     }
+}
+
+.back-to-top {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #5b21b6;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
