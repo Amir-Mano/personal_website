@@ -7,3 +7,7 @@ videos/
 TASKS.txt
 styles_n.css
 ORIGINAL.txt
+
+# python
+__pycache__/
+.pytest_cache/
