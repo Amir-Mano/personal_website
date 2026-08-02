@@ -1,14 +1,8 @@
 # folders
-ideas_from_web/
-videos/
 
 # temporary files
 TASKS.txt
 ORIGINAL.txt
-
-# python
-__pycache__/
-.pytest_cache/
 
 # node / eleventy
 node_modules/
