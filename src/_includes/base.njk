@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body id="top">
+
+    <header>
+        <h1>Amir Mano</h1>
+        <p>PhD Candidate in Neuroscience | Music &amp; Neuroplasticity | Trombone Musician</p>
+    </header>
+
+    <nav role="navigation">
+        <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="primary-nav">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="primary-nav">
+            <li><a href="/"{% if nav == "home" %} class="active" aria-current="page"{% endif %}>Home</a></li>
+            <li><a href="/research/"{% if nav == "research" %} class="active" aria-current="page"{% endif %}>Research</a></li>
+            <li><a href="/music/"{% if nav == "music" %} class="active" aria-current="page"{% endif %}>Music</a></li>
+            <li><a href="/contact/"{% if nav == "contact" %} class="active" aria-current="page"{% endif %}>Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <p>&copy; {% year %} Amir Mano | All Rights Reserved</p>
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </footer>
+
+    <div class="lightbox" hidden>
+        <button type="button" class="lightbox-close" aria-label="Close image preview">&times;</button>
+        <img src="" alt="">
+    </div>
+
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>
