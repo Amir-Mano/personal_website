@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ description }}">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | url }}">
     <title>{{ title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 </head>
 
 <body id="top">
@@ -27,10 +27,10 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-list" id="primary-nav">
-            <li><a href="/"{% if nav == "home" %} class="active" aria-current="page"{% endif %}>Home</a></li>
-            <li><a href="/research/"{% if nav == "research" %} class="active" aria-current="page"{% endif %}>Research</a></li>
-            <li><a href="/music/"{% if nav == "music" %} class="active" aria-current="page"{% endif %}>Music</a></li>
-            <li><a href="/contact/"{% if nav == "contact" %} class="active" aria-current="page"{% endif %}>Contact</a></li>
+            <li><a href="{{ '/' | url }}"{% if nav == "home" %} class="active" aria-current="page"{% endif %}>Home</a></li>
+            <li><a href="{{ '/research/' | url }}"{% if nav == "research" %} class="active" aria-current="page"{% endif %}>Research</a></li>
+            <li><a href="{{ '/music/' | url }}"{% if nav == "music" %} class="active" aria-current="page"{% endif %}>Music</a></li>
+            <li><a href="{{ '/contact/' | url }}"{% if nav == "contact" %} class="active" aria-current="page"{% endif %}>Contact</a></li>
         </ul>
     </nav>
 
@@ -48,7 +48,7 @@
         <img src="" alt="">
     </div>
 
-    <script src="/js/main.js" defer></script>
+    <script src="{{ '/js/main.js' | url }}" defer></script>
 </body>
 
 </html>

@@ -72,7 +72,7 @@ header {
     position: relative;
     background-image:
         linear-gradient(160deg, rgba(76, 29, 149, 0.88), rgba(109, 40, 217, 0.78)),
-        url("/images/Designer (1) bg.jpeg");
+        url("../images/Designer (1) bg.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

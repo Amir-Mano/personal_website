@@ -8,7 +8,7 @@ nav: home
     <h2>About Me</h2>
     <div class="about-grid">
         <div class="about-photo">
-            <img src="/images/Amir_Mano.jpg" alt="Amir Mano" loading="lazy">
+            <img src="{{ '/images/Amir_Mano.jpg' | url }}" alt="Amir Mano" loading="lazy">
         </div>
         <div class="about-text">
             <p>
@@ -22,6 +22,6 @@ nav: home
     </div>
 
     <div class="cv-download">
-        <a href="/CV_AmirMano.pdf" download="CV_AmirMano.pdf" class="btn">Download My CV</a>
+        <a href="{{ '/CV_AmirMano.pdf' | url }}" download="CV_AmirMano.pdf" class="btn">Download My CV</a>
     </div>
 </section>
