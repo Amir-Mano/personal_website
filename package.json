@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "check-links": "linkinator _site --recurse --skip \"^https?://(?!(localhost|127\\.0\\.0\\.1))\""
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "linkinator": "^8.0.3"
   }
 }

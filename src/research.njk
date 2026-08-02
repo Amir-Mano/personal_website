@@ -4,6 +4,7 @@ title: Amir Mano - Research
 description: Amir Mano's research on how music learning shapes the brain, using diffusion MRI and connectomics.
 nav: research
 ---
+{% from "macros.njk" import photoGrid %}
 <section id="research">
     <h2>Research Projects</h2>
     <div class="card-grid">
@@ -69,13 +70,13 @@ nav: research
     <div class="media-grid">
         <div class="media-card media-card--wide">
             <h3>Photos</h3>
-            <div class="photo-grid">
-                <img src="{{ '/images/research_2.jpg' | url }}" alt="Presenting research findings" loading="lazy" data-lightbox>
-                <img src="{{ '/images/research_3.jpg' | url }}" alt="Amir Mano with his research poster" loading="lazy" data-lightbox>
-                <img src="{{ '/images/research_4.jpg' | url }}" alt="Best Poster Presentation award certificate" loading="lazy" data-lightbox>
-                <img src="{{ '/images/research_5.jpg' | url }}" alt="Presenting at a research conference" loading="lazy" data-lightbox>
-                <img src="{{ '/images/Poster.jpg' | url }}" alt="OHBM conference poster" loading="lazy" data-lightbox>
-            </div>
+            {{ photoGrid([
+                {src: "/images/research_2.jpg", alt: "Presenting research findings"},
+                {src: "/images/research_3.jpg", alt: "Amir Mano with his research poster"},
+                {src: "/images/research_4.jpg", alt: "Best Poster Presentation award certificate"},
+                {src: "/images/research_5.jpg", alt: "Presenting at a research conference"},
+                {src: "/images/Poster.jpg", alt: "OHBM conference poster"}
+            ]) }}
         </div>
         <div class="media-card">
             <h3>Lab Video</h3>

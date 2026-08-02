@@ -4,6 +4,7 @@ title: Amir Mano - Music
 description: Amir Mano's music journey as a trombonist, including performances and recordings.
 nav: music
 ---
+{% from "macros.njk" import photoGrid, videoGrid %}
 <section id="music">
     <h2>My Music Journey</h2>
     <div class="card-grid">
@@ -34,29 +35,21 @@ nav: music
 
 <section id="performance-videos">
     <h2>Performance Videos</h2>
-    <div class="video-grid">
-        <div class="media-card">
-            <video controls preload="metadata" src="{{ '/videos/VID-20251125-WA0011.mp4' | url }}"></video>
-        </div>
-        <div class="media-card">
-            <video controls preload="metadata" src="{{ '/videos/VID-20251125-WA0008.mp4' | url }}"></video>
-        </div>
-        <div class="media-card">
-            <video controls preload="metadata" src="{{ '/videos/VID-20251125-WA0010.mp4' | url }}"></video>
-        </div>
-        <div class="media-card">
-            <video controls preload="metadata" src="{{ '/videos/VID-20251125-WA0012.mp4' | url }}"></video>
-        </div>
-    </div>
+    {{ videoGrid([
+        "/videos/VID-20251125-WA0011.mp4",
+        "/videos/VID-20251125-WA0008.mp4",
+        "/videos/VID-20251125-WA0010.mp4",
+        "/videos/VID-20251125-WA0012.mp4"
+    ]) }}
 </section>
 
 <section id="photos">
     <h2>Photos</h2>
     <div class="media-card">
-        <div class="photo-grid">
-            <img src="{{ '/images/Trombone1.jpg' | url }}" alt="Amir Mano with his trombone" loading="lazy" data-lightbox>
-            <img src="{{ '/images/Trombone2.jpg' | url }}" alt="Amir Mano performing live on trombone" loading="lazy" data-lightbox>
-            <img src="{{ '/images/Trombone3.jpg' | url }}" alt="Amir Mano with his trombone outdoors" loading="lazy" data-lightbox>
-        </div>
+        {{ photoGrid([
+            {src: "/images/Trombone1.jpg", alt: "Amir Mano with his trombone"},
+            {src: "/images/Trombone2.jpg", alt: "Amir Mano performing live on trombone"},
+            {src: "/images/Trombone3.jpg", alt: "Amir Mano with his trombone outdoors"}
+        ]) }}
     </div>
 </section>

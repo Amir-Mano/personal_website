@@ -1,0 +1,17 @@
+{% macro photoGrid(images) %}
+<div class="photo-grid">
+    {% for image in images %}
+    <img src="{{ image.src | url }}" alt="{{ image.alt }}" loading="lazy" data-lightbox>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro videoGrid(sources) %}
+<div class="video-grid">
+    {% for src in sources %}
+    <div class="media-card">
+        <video controls preload="metadata" src="{{ src | url }}"></video>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}
