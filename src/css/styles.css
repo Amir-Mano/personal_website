@@ -88,10 +88,21 @@ header h1 {
     margin-bottom: var(--space-1);
 }
 
-header p {
-    font-size: clamp(1rem, 2.4vw, 1.3rem);
+.header-tagline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.25em;
+    font-size: clamp(0.95rem, 2.4vw, 1.3rem);
     font-weight: 300;
     opacity: 0.95;
+}
+
+.header-tagline span:not(:last-child)::after {
+    content: '|';
+    margin: 0 0.6em;
+    opacity: 0.6;
+    font-weight: 300;
 }
 
 /* ---------------------------------------------------------
@@ -371,20 +382,6 @@ h2::after {
 .video-embed iframe {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.reel-embed {
-    aspect-ratio: 9 / 16;
-    max-width: 340px;
-    margin: 0 auto;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-}
-
-.reel-embed iframe {
     width: 100%;
     height: 100%;
     border: 0;
