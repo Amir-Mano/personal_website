@@ -309,7 +309,6 @@ h2::after {
     height: auto;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
-    cursor: zoom-in;
 }
 
 /* ---------------------------------------------------------
@@ -340,7 +339,6 @@ h2::after {
     max-height: 260px;
     object-fit: contain;
     border-radius: var(--radius-md);
-    cursor: zoom-in;
 }
 
 .media-card video {
@@ -373,6 +371,9 @@ h2::after {
     height: 180px;
     object-fit: cover;
     border-radius: var(--radius-sm);
+}
+
+[data-lightbox] {
     cursor: zoom-in;
 }
 
@@ -535,6 +536,10 @@ h2::after {
     cursor: pointer;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 /* ---------------------------------------------------------
    Footer
 --------------------------------------------------------- */
@@ -569,6 +574,23 @@ footer p::before {
 
 .back-to-top:hover {
     background-color: var(--color-primary-light);
+}
+
+/* ---------------------------------------------------------
+   Focus visibility (keyboard navigation)
+--------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+[data-lightbox]:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 2px;
+}
+
+.nav-list a:focus-visible,
+.nav-toggle:focus-visible,
+.back-to-top:focus-visible,
+.lightbox-close:focus-visible {
+    outline-color: #ffffff;
 }
 
 /* ---------------------------------------------------------
