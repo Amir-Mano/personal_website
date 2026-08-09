@@ -6,12 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ description }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <title>{{ title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Amir Mano",
+      "url": "{{ site.url }}/",
+      "jobTitle": "PhD Candidate in Neuroscience",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Tel Aviv University",
+        "url": "https://www.tau.ac.il/"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/amirmano/",
+        "https://linktr.ee/amirmano",
+        "https://instagram.com/amirmano14",
+        "https://www.facebook.com/amir.mano.7/",
+        "https://x.com/AmirMano_",
+        "https://bsky.app/profile/amirmano.bsky.social",
+        "https://www.duolingo.com/profile/amirmano"
+      ]
+    }
+    </script>
 </head>
 
 <body id="top">
