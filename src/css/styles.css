@@ -564,7 +564,7 @@ body.no-scroll {
     max-width: 320px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    margin-bottom: var(--space-3);
+    margin: 0 auto var(--space-3);
 }
 
 /* ---------------------------------------------------------
