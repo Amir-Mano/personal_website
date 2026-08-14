@@ -10,6 +10,7 @@
     --color-accent: #ede9fe;
     --color-text: #27272a;
     --color-text-muted: #52525b;
+    --color-on-primary: #ffffff;
 
     --font-sans: 'Poppins', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
 
@@ -76,7 +77,7 @@ header {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: var(--color-on-primary);
     padding: var(--space-5) var(--space-3);
     text-align: center;
 }
@@ -127,7 +128,7 @@ nav {
 }
 
 .nav-list a {
-    color: white;
+    color: var(--color-on-primary);
     font-weight: 600;
     text-decoration: none;
     padding: var(--space-2) var(--space-3);
@@ -157,7 +158,7 @@ nav {
     display: block;
     width: 24px;
     height: 2px;
-    background: white;
+    background: var(--color-on-primary);
     border-radius: 2px;
 }
 
@@ -236,7 +237,7 @@ h2::after {
     display: inline-block;
     padding: 0.85rem 1.75rem;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-on-primary);
     text-decoration: none;
     font-weight: 600;
     border-radius: var(--radius-sm);
@@ -353,6 +354,7 @@ h2::after {
     aspect-ratio: 16 / 9;
     object-fit: contain;
     border-radius: var(--radius-md);
+    /* Letterboxing matte for the video element, not a brand/on-primary color. */
     background: #000;
 }
 
@@ -441,7 +443,7 @@ h2::after {
     gap: var(--space-2);
     padding: 0.9rem 2rem;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-on-primary);
     text-decoration: none;
     font-weight: 600;
     border-radius: 999px;
@@ -536,8 +538,9 @@ h2::after {
     height: 44px;
     border-radius: 50%;
     border: none;
+    /* Translucent overlay, not a solid on-primary color. */
     background: rgba(255, 255, 255, 0.15);
-    color: white;
+    color: var(--color-on-primary);
     font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
@@ -548,11 +551,28 @@ body.no-scroll {
 }
 
 /* ---------------------------------------------------------
+   404 page
+--------------------------------------------------------- */
+#not-found {
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.not-found-image img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-3);
+}
+
+/* ---------------------------------------------------------
    Footer
 --------------------------------------------------------- */
 footer {
     background-color: var(--color-primary-dark);
-    color: white;
+    color: var(--color-on-primary);
     text-align: center;
     padding: var(--space-4) var(--space-3);
     margin-top: var(--space-5);
@@ -570,7 +590,7 @@ footer p::before {
 
 .back-to-top {
     display: inline-block;
-    color: white;
+    color: var(--color-on-primary);
     text-decoration: none;
     background-color: var(--color-primary);
     padding: 0.6rem 1.1rem;
@@ -597,12 +617,15 @@ button:focus-visible,
 .nav-toggle:focus-visible,
 .back-to-top:focus-visible,
 .lightbox-close:focus-visible {
-    outline-color: #ffffff;
+    outline-color: var(--color-on-primary);
 }
 
 /* ---------------------------------------------------------
    Responsive
 --------------------------------------------------------- */
+/* 720px breakpoint kept as a literal px value: CSS custom properties
+   cannot be referenced inside @media feature values in any browser,
+   and this project has no preprocessor to work around that. */
 @media (max-width: 720px) {
     .nav-toggle {
         display: flex;

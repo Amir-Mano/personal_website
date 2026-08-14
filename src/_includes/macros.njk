@@ -8,9 +8,9 @@
 
 {% macro videoGrid(sources) %}
 <div class="video-grid">
-    {% for src in sources %}
+    {% for item in sources %}
     <div class="media-card">
-        <video controls preload="metadata" src="{{ src | url }}"></video>
+        <video controls preload="metadata" src="{{ item.src | url }}" poster="{{ item.poster | url }}"></video>
     </div>
     {% endfor %}
 </div>

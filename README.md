@@ -17,14 +17,18 @@ npm run check-links  # check the built site for broken internal links/assets
 
 ## Structure
 
-- `src/_includes/base.njk` — shared page layout (header, nav, footer) — written once, used by every page
+- `src/_includes/base.njk` — shared page layout (header, nav, footer, `<head>`) — written once, used by every page
 - `src/_includes/macros.njk` — reusable photo-grid / video-grid markup, used by the Research and Music pages
-- `src/*.njk` — page content (home, research, music, contact)
-- `src/css/styles.css` — all styling
-- `src/js/main.js` — mobile nav toggle + image lightbox
-- `src/images/` — site images, icons, and favicon
-- `src/videos/` — performance video clips
+- `src/*.njk` — page content (home, research, music, contact, 404)
+- `src/_data/site.js` — global site data (currently just the production URL), available as `{{ site.url }}` in templates
+- `src/sitemap.njk`, `src/robots.njk`, `src/manifest.njk` — generated `sitemap.xml`, `robots.txt`, and web app manifest
+- `src/google*.html` — Google Search Console site-verification file
+- `src/css/styles.css` — all styling, including the design tokens in `:root`
+- `src/js/main.js` — mobile nav toggle + accessible image lightbox
+- `src/images/` — site images, icons, and the favicon set (SVG + PNG fallbacks)
+- `src/videos/` — performance video clips (compressed, with poster images)
 - `src/CV_AmirMano.pdf` — downloadable CV
+- `archive/` (gitignored, local-only) — images removed from the live site but kept around for reference
 
 ## Deployment
 

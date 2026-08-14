@@ -3,6 +3,7 @@
 # temporary files
 TASKS.txt
 ORIGINAL.txt
+archive/
 
 # node / eleventy
 node_modules/
