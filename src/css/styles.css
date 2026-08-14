@@ -222,11 +222,16 @@ h2::after {
     color: var(--color-text-muted);
 }
 
-.about-text .lead {
+.lead {
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--color-primary-dark);
     margin-bottom: var(--space-2);
+    text-align: center;
+}
+
+.about-text .lead {
+    text-align: left;
 }
 
 .cv-download {
@@ -304,6 +309,16 @@ h2::after {
     display: block;
     font-size: 2.5rem;
     margin-bottom: var(--space-2);
+}
+
+img.explore-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 50%;
+    margin: 0 auto var(--space-2);
+    box-shadow: var(--shadow-sm);
 }
 
 .explore-card p {
