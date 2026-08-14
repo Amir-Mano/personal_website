@@ -559,6 +559,14 @@ body.no-scroll {
     margin: 0 auto;
 }
 
+#not-found h2 {
+    font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+}
+
+#not-found p {
+    margin-bottom: var(--space-5);
+}
+
 .not-found-image img {
     width: 100%;
     max-width: 320px;
