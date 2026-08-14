@@ -89,14 +89,20 @@ header h1 {
     margin-bottom: var(--space-1);
 }
 
+.header-identity {
+    font-size: clamp(1.25rem, 3.2vw, 1.6rem);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+}
+
 .header-tagline {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 0.25em;
-    font-size: clamp(0.95rem, 2.4vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
     font-weight: 300;
-    opacity: 0.95;
+    opacity: 0.9;
 }
 
 .header-tagline span:not(:last-child)::after {
@@ -312,13 +318,10 @@ h2::after {
 }
 
 img.explore-icon {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    object-position: 50% 30%;
-    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
     margin: 0 auto var(--space-2);
-    box-shadow: var(--shadow-sm);
 }
 
 .explore-card p {
@@ -334,6 +337,34 @@ img.explore-icon {
 
 .explore-card:hover .explore-link {
     color: var(--color-primary-dark);
+}
+
+.cv-document {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-4);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.cv-entry {
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.cv-entry:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cv-entry h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-2);
 }
 
 #cv-highlights ul {
