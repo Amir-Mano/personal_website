@@ -97,19 +97,12 @@ header h1 {
 
 .header-tagline {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     row-gap: 0.25em;
     font-size: clamp(0.8rem, 1.8vw, 1rem);
     font-weight: 300;
     opacity: 0.9;
-}
-
-.header-tagline span:not(:last-child)::after {
-    content: '|';
-    margin: 0 0.6em;
-    opacity: 0.6;
-    font-weight: 300;
 }
 
 /* ---------------------------------------------------------
@@ -322,6 +315,8 @@ img.explore-icon {
     height: 56px;
     object-fit: contain;
     margin: 0 auto var(--space-2);
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .explore-card p {
@@ -339,32 +334,8 @@ img.explore-icon {
     color: var(--color-primary-dark);
 }
 
-.cv-document {
-    background: var(--color-surface);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    padding: var(--space-4);
-    max-width: 720px;
-    margin: 0 auto;
-}
-
-.cv-entry {
-    padding-bottom: var(--space-3);
-    margin-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-accent);
-}
-
-.cv-entry:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: none;
-}
-
-.cv-entry h3 {
-    color: var(--color-primary-dark);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: var(--space-2);
+.cv-card {
+    border-top: 4px solid var(--color-primary);
 }
 
 #cv-highlights ul {
@@ -740,16 +711,6 @@ button:focus-visible,
 
     nav {
         flex-wrap: wrap;
-    }
-
-    .header-tagline {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 0.2em;
-    }
-
-    .header-tagline span::after {
-        content: none;
     }
 }
 
