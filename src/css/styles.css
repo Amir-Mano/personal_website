@@ -230,6 +230,7 @@ h2::after {
 }
 
 .cv-download {
+    text-align: center;
     margin-top: var(--space-4);
 }
 
@@ -290,6 +291,47 @@ h2::after {
 
 .card p {
     color: var(--color-text-muted);
+}
+
+.explore-card {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.explore-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: var(--space-2);
+}
+
+.explore-card p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+}
+
+.explore-link {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.explore-card:hover .explore-link {
+    color: var(--color-primary-dark);
+}
+
+#cv-highlights ul {
+    padding-left: 1.1em;
+    color: var(--color-text-muted);
+}
+
+#cv-highlights li {
+    margin-bottom: var(--space-2);
+}
+
+#cv-highlights li:last-child {
+    margin-bottom: 0;
 }
 
 .card-wide {
