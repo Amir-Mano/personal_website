@@ -655,6 +655,31 @@ img.explore-icon {
     cursor: pointer;
 }
 
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    /* Translucent overlay, not a solid on-primary color. */
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-on-primary);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-prev {
+    left: var(--space-3);
+}
+
+.lightbox-next {
+    right: var(--space-3);
+}
+
 body.no-scroll {
     overflow: hidden;
 }
@@ -755,7 +780,9 @@ button:focus-visible,
 .nav-toggle:focus-visible,
 .back-to-top:focus-visible,
 .footer-nav a:focus-visible,
-.lightbox-close:focus-visible {
+.lightbox-close:focus-visible,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible {
     outline-color: var(--color-on-primary);
 }
 
