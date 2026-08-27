@@ -815,6 +815,13 @@ button:focus-visible,
         padding: var(--space-3);
     }
 
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
     .nav-toggle {
         display: flex;
     }
