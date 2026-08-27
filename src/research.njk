@@ -9,7 +9,7 @@ nav: research
     <h2>Research Projects</h2>
     <div class="card-grid">
         <div class="card card-wide">
-            <h3>Naturalistic Music &amp; Brain Dynamics</h3>
+            <h3>Naturalistic Music &amp; Brain Dynamics <span class="status-tag">Current</span></h3>
             <div class="card-body">
                 <div class="card-text">
                     <p>
@@ -36,7 +36,7 @@ nav: research
         </div>
 
         <div class="card card-wide">
-            <h3>Music Learning &amp; Longitudinal Neuroplasticity</h3>
+            <h3>Music Learning &amp; Longitudinal Neuroplasticity <span class="status-tag">MSc &rarr; PhD Planned</span></h3>
             <div class="card-body">
                 <div class="card-text">
                     <p>
@@ -66,7 +66,7 @@ nav: research
         </div>
 
         <div class="card card-wide">
-            <h3>Instrument Learning &amp; Neuroplasticity</h3>
+            <h3>Instrument Learning &amp; Neuroplasticity <span class="status-tag">Current</span></h3>
             <div class="card-body">
                 <div class="card-text">
                     <p>
@@ -94,15 +94,16 @@ nav: research
 
 <section id="media">
     <h2>Research Media</h2>
+    <p class="lead">Photos, videos, and links from my research and conference presentations.</p>
     <div class="media-grid">
         <div class="media-card media-card--wide">
             <h3>Photos</h3>
             {{ photoGrid([
-                {src: "/images/research_2.jpg", alt: "Presenting research findings"},
-                {src: "/images/research_3.jpg", alt: "Amir Mano with his research poster"},
-                {src: "/images/research_4.jpg", alt: "Best Poster Presentation award certificate"},
-                {src: "/images/research_5.jpg", alt: "Presenting at a research conference"},
-                {src: "/images/Poster.jpg", alt: "OHBM conference poster"}
+                {src: "/images/research_2.jpg", alt: "Presenting research findings", caption: "Presenting research findings"},
+                {src: "/images/research_3.jpg", alt: "Amir Mano with his research poster", caption: "With a research poster"},
+                {src: "/images/research_4.jpg", alt: "Best Poster Presentation award certificate", caption: "Best Poster Presentation Award, Israeli Pre-OHBM & ISMRM Conference (2026)"},
+                {src: "/images/research_5.jpg", alt: "Presenting at a research conference", caption: "Presenting at a research conference"},
+                {src: "/images/Poster.jpg", alt: "OHBM conference poster", caption: "Poster session, OHBM Annual Meeting"}
             ]) }}
         </div>
         <div class="media-card">
@@ -124,4 +125,8 @@ nav: research
             </a>
         </div>
     </div>
+</section>
+
+<section id="research-cta" class="page-cta">
+    <p>Want the full picture? <a href="{{ '/cv/' | url }}">View my CV</a> or <a href="{{ '/contact/' | url }}">get in touch</a>.</p>
 </section>

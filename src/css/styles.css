@@ -207,7 +207,8 @@ h2::after {
 
 .about-photo img {
     width: 260px;
-    height: 260px;
+    max-width: 100%;
+    aspect-ratio: 1;
     object-fit: cover;
     object-position: 50% 18%;
     border-radius: 50%;
@@ -284,6 +285,28 @@ h2::after {
     margin-bottom: var(--space-2);
 }
 
+.status-tag {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    background: var(--color-accent);
+    padding: 0.2em 0.7em;
+    border-radius: var(--radius-sm);
+    margin-left: var(--space-1);
+}
+
+.page-cta {
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.page-cta a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
 .card img {
     width: 140px;
     height: 140px;
@@ -351,6 +374,13 @@ img.explore-icon {
     margin-bottom: 0;
 }
 
+.cv-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-top: var(--space-2);
+}
+
 .card-wide {
     grid-column: 1 / -1;
 }
@@ -401,11 +431,24 @@ img.explore-icon {
     text-align: center;
 }
 
+.media-subheading {
+    color: var(--color-primary-dark);
+    text-align: center;
+    margin: var(--space-4) 0 var(--space-2);
+}
+
 .media-card img {
     width: 100%;
     max-height: 260px;
     object-fit: contain;
     border-radius: var(--radius-md);
+}
+
+.video-caption {
+    margin-top: var(--space-1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
 }
 
 .media-card video {
@@ -439,6 +482,13 @@ img.explore-icon {
     height: 180px;
     object-fit: cover;
     border-radius: var(--radius-sm);
+}
+
+.photo-grid figcaption {
+    margin-top: var(--space-1);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
 }
 
 [data-lightbox] {
@@ -655,6 +705,27 @@ footer p::before {
     border-radius: 10px;
 }
 
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: var(--space-3);
+    row-gap: var(--space-1);
+    margin-bottom: var(--space-3);
+}
+
+.footer-nav a {
+    color: var(--color-on-primary);
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
 .back-to-top {
     display: inline-block;
     color: var(--color-on-primary);
@@ -683,8 +754,27 @@ button:focus-visible,
 .nav-list a:focus-visible,
 .nav-toggle:focus-visible,
 .back-to-top:focus-visible,
+.footer-nav a:focus-visible,
 .lightbox-close:focus-visible {
     outline-color: var(--color-on-primary);
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: var(--space-2);
+    background: var(--color-primary-dark);
+    color: var(--color-on-primary);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 200;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: var(--space-2);
 }
 
 /* ---------------------------------------------------------
@@ -694,6 +784,10 @@ button:focus-visible,
    cannot be referenced inside @media feature values in any browser,
    and this project has no preprocessor to work around that. */
 @media (max-width: 720px) {
+    .card {
+        padding: var(--space-3);
+    }
+
     .nav-toggle {
         display: flex;
     }

@@ -1,7 +1,10 @@
 {% macro photoGrid(images) %}
 <div class="photo-grid">
     {% for image in images %}
-    <img src="{{ image.src | url }}" alt="{{ image.alt }}" loading="lazy" data-lightbox>
+    <figure class="photo-item">
+        <img src="{{ image.src | url }}" alt="{{ image.alt }}" loading="lazy" data-lightbox>
+        {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
     {% endfor %}
 </div>
 {% endmacro %}
@@ -10,7 +13,8 @@
 <div class="video-grid">
     {% for item in sources %}
     <div class="media-card">
-        <video controls preload="metadata" src="{{ item.src | url }}" poster="{{ item.poster | url }}"></video>
+        <video controls preload="metadata" src="{{ item.src | url }}" poster="{{ item.poster | url }}"{% if item.caption %} aria-label="{{ item.caption }}"{% endif %}></video>
+        {% if item.caption %}<p class="video-caption">{{ item.caption }}</p>{% endif %}
     </div>
     {% endfor %}
 </div>

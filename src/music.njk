@@ -21,6 +21,9 @@ nav: music
                         experiences. Today, I continue to play and take part in musical projects whenever I can.
                     </p>
                 </div>
+                <div class="card-image">
+                    <img src="{{ '/images/Trombone2.jpg' | url }}" alt="Amir Mano performing live on trombone" loading="lazy" data-lightbox>
+                </div>
             </div>
         </div>
 
@@ -39,6 +42,9 @@ nav: music
                         about my research.
                     </p>
                 </div>
+                <div class="card-image">
+                    <img src="{{ '/images/Trombone1.jpg' | url }}" alt="Amir Mano with his trombone" loading="lazy" data-lightbox>
+                </div>
             </div>
         </div>
     </div>
@@ -46,11 +52,14 @@ nav: music
 
 <section id="media">
     <h2>Music Media</h2>
+    <p class="lead">Recordings, performance videos, and photos from over 20 years on trombone.</p>
+
     <div class="media-grid">
         <div class="media-card">
             <h3>Spotify</h3>
+            <p>Recordings and performances I've been part of.</p>
             <div class="spotify-embed">
-                <iframe
+                <iframe title="Amir Mano — Spotify playlist"
                     src="https://open.spotify.com/embed/playlist/5QaxBIgOWPloeH3kvkRpjO?utm_source=generator"
                     width="100%" height="352" frameborder="0" allowfullscreen
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -58,25 +67,23 @@ nav: music
             </div>
         </div>
     </div>
-</section>
 
-<section id="performance-videos">
-    <h2>Performance Videos</h2>
+    <h3 class="media-subheading">Performance Videos</h3>
     {{ videoGrid([
-        {src: "/videos/VID-20251125-WA0011.mp4", poster: "/videos/VID-20251125-WA0011.jpg"},
-        {src: "/videos/VID-20251125-WA0008.mp4", poster: "/videos/VID-20251125-WA0008.jpg"},
-        {src: "/videos/VID-20251125-WA0010.mp4", poster: "/videos/VID-20251125-WA0010.jpg"},
-        {src: "/videos/VID-20251125-WA0012.mp4", poster: "/videos/VID-20251125-WA0012.jpg"}
+        {src: "/videos/VID-20251125-WA0011.mp4", poster: "/videos/VID-20251125-WA0011.jpg", caption: "Live performance — clip 1"},
+        {src: "/videos/VID-20251125-WA0008.mp4", poster: "/videos/VID-20251125-WA0008.jpg", caption: "Live performance — clip 2"},
+        {src: "/videos/VID-20251125-WA0010.mp4", poster: "/videos/VID-20251125-WA0010.jpg", caption: "Live performance — clip 3"},
+        {src: "/videos/VID-20251125-WA0012.mp4", poster: "/videos/VID-20251125-WA0012.jpg", caption: "Live performance — clip 4"}
+    ]) }}
+
+    <h3 class="media-subheading">Photos</h3>
+    {{ photoGrid([
+        {src: "/images/Trombone1.jpg", alt: "Amir Mano with his trombone", caption: "With the trombone"},
+        {src: "/images/Trombone2.jpg", alt: "Amir Mano performing live on trombone", caption: "Performing live"},
+        {src: "/images/Trombone3.jpg", alt: "Amir Mano with his trombone outdoors", caption: "With the trombone, outdoors"}
     ]) }}
 </section>
 
-<section id="photos">
-    <h2>Photos</h2>
-    <div class="media-card">
-        {{ photoGrid([
-            {src: "/images/Trombone1.jpg", alt: "Amir Mano with his trombone"},
-            {src: "/images/Trombone2.jpg", alt: "Amir Mano performing live on trombone"},
-            {src: "/images/Trombone3.jpg", alt: "Amir Mano with his trombone outdoors"}
-        ]) }}
-    </div>
+<section id="music-cta" class="page-cta">
+    <p>Curious about the research behind the music? <a href="{{ '/research/' | url }}">Explore my research</a> or <a href="{{ '/contact/' | url }}">get in touch</a>.</p>
 </section>
