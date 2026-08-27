@@ -12,6 +12,11 @@
     --color-text-muted: #52525b;
     --color-on-primary: #ffffff;
 
+    /* Secondary accent, used sparingly (status tags, CV cards) - a nod
+       to the trombone's brass, kept out of the primary purple system. */
+    --color-brass: #92660a;
+    --color-brass-light: #f5e9d0;
+
     --font-sans: 'Poppins', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
 
     --radius-sm: 8px;
@@ -290,8 +295,8 @@ h2::after {
     vertical-align: middle;
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-primary-dark);
-    background: var(--color-accent);
+    color: var(--color-brass);
+    background: var(--color-brass-light);
     padding: 0.2em 0.7em;
     border-radius: var(--radius-sm);
     margin-left: var(--space-1);
@@ -358,7 +363,7 @@ img.explore-icon {
 }
 
 .cv-card {
-    border-top: 4px solid var(--color-primary);
+    border-top: 4px solid var(--color-brass);
 }
 
 #cv-highlights ul {
@@ -416,6 +421,22 @@ img.explore-icon {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--space-4);
     align-items: start;
+}
+
+.media-trio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    align-items: start;
+    margin-top: var(--space-4);
+}
+
+/* Jumps straight from 1 to 3 columns, skipping the 2-column range where
+   an odd trio of cards would otherwise leave one stranded alone in a row. */
+@media (min-width: 640px) {
+    .media-trio {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .media-card {
@@ -744,11 +765,15 @@ footer p::before {
     text-decoration: none;
     font-weight: 600;
     opacity: 0.85;
+    padding: 0.3em 0.8em;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s ease, opacity 0.2s ease;
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover,
+.footer-nav a.active {
     opacity: 1;
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .back-to-top {

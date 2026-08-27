@@ -88,11 +88,11 @@
 
     <footer>
         <nav class="footer-nav" aria-label="Footer">
-            <a href="{{ '/' | url }}">Home</a>
-            <a href="{{ '/research/' | url }}">Research</a>
-            <a href="{{ '/music/' | url }}">Music</a>
-            <a href="{{ '/cv/' | url }}">CV</a>
-            <a href="{{ '/contact/' | url }}">Contact</a>
+            <a href="{{ '/' | url }}"{% if nav == "home" %} class="active" aria-current="page"{% endif %}>Home</a>
+            <a href="{{ '/research/' | url }}"{% if nav == "research" %} class="active" aria-current="page"{% endif %}>Research</a>
+            <a href="{{ '/music/' | url }}"{% if nav == "music" %} class="active" aria-current="page"{% endif %}>Music</a>
+            <a href="{{ '/cv/' | url }}"{% if nav == "cv" %} class="active" aria-current="page"{% endif %}>CV</a>
+            <a href="{{ '/contact/' | url }}"{% if nav == "contact" %} class="active" aria-current="page"{% endif %}>Contact</a>
         </nav>
         <p>&copy; {% year %} Amir Mano | All Rights Reserved</p>
         <a href="#top" class="back-to-top">Back to Top</a>
